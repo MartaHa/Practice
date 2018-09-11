@@ -1,3 +1,5 @@
+package task1;
+
 import java.util.Scanner;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -12,8 +14,6 @@ public class Main {
         //*getting necessary information form the console;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter any key to start the program: ");
-        scanner.next();
 
         System.out.println("Enter the maximum Fibbonacci number: ");
         int fibMax = scanner.nextInt();

@@ -1,4 +1,4 @@
-//*creates an Object to pass to sharedQueue
+package task1;//*creates an Object to pass to sharedQueue
 
 
 public class ObjectToPass {

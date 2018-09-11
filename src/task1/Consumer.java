@@ -1,4 +1,7 @@
+package task1;
+
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.locks.Lock;
 
 public class Consumer implements Runnable {
 

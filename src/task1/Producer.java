@@ -1,5 +1,8 @@
+package task1;
+
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.locks.Lock;
 
 public class Producer implements Runnable {
 
@@ -24,12 +27,9 @@ public class Producer implements Runnable {
 
         //System.out.println("I'm running producer" + id);
 
-//        Random random = new Random();
-
         while (true) {
 
             //* Getting the random number in range <1, fibMax>
-
 
             synchronized (sharedLock) {
 
@@ -53,27 +53,6 @@ public class Producer implements Runnable {
                 sharedLock.notify();
 
             }
-
-
-//            int randomInt = random.nextInt(fibMax - 1) + 1;
-//            long startTime = System.currentTimeMillis();
-//
-//            ObjectToPass o = new ObjectToPass(startTime, randomInt);
-//
-//
-//
-//                if (queue.size() < queueCapacity) {
-//                    queue.add(o);
-//                    System.out.println("PROD - " + id + " Task enquened");
-//                } else {
-//                    try {
-//                        this.wait(200);
-//                        System.out.println("PROD -" + id + "  TIMEOUT - Task refused");
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                }
 
         }
     }
